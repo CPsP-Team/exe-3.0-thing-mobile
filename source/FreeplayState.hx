@@ -94,7 +94,7 @@ class FreeplayState extends MusicBeatState
 		bg = new FlxBackdrop(Paths.image('backgroundlool'));
 		bg.screenCenter();
 		bg.scale.set(0.35, 0.35);
-		bg.repeatAxes = 0;
+		bg.repeatAxes = 0, 0;
 		add(bg);
 		
 		scrollingBg = new FlxBackdrop(Paths.image('fp stuff/sidebar'));
