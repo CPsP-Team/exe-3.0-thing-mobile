@@ -34,7 +34,7 @@ class FreeplayState extends MusicBeatState
 	var fadeSprite:FlxSprite;
 	var textGroup:FlxTypedGroup<FlxText>;
 	var boxGroup:SkewSpriteGroup;
-	var bg:FlxBackdrop;
+	var bg:FlxSprite;
 	var scrollingBg:FlxBackdrop;
 	var charText:FlxText;
 	var scoreText:FlxText;
@@ -91,10 +91,9 @@ class FreeplayState extends MusicBeatState
 
 	function createVisuals()
 	{
-		bg = new FlxBackdrop(Paths.image('backgroundlool'));
+		bg = new FlxSprite().loadGraphic(Paths.image('backgroundlool'));
 		bg.screenCenter();
-		bg.scale.set(0.35, 0.35);
-		bg.repeatAxes = 0, 0;
+		bg.setGraphicSize(1280, 720);
 		add(bg);
 		
 		scrollingBg = new FlxBackdrop(Paths.image('fp stuff/sidebar'));
