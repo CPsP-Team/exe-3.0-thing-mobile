@@ -12,17 +12,22 @@ class CharSongList
 		"tails doll", 
 		"sunky", 
 		"fleetway", 
-		"fatalerror", 
+		"fatalerror",
+		"xterion",
+		"sl4sh",
 		"chaotix", 
 		"yourself...",
 		"christmas",
 		"curse", 
 		"starved",
+		"satanos",
+		"sonic has passed",
 		"needlemouse", 
 		"hog", 
-		"sanic", 
-		"coldsteel", 
-		"sh tails"
+		"sanic",
+		"sunky",
+		"sh tails",
+		"coldsteel"
 	];
 	
 	public static var charactersUnlocked:Array<String> = [];
@@ -34,16 +39,22 @@ class CharSongList
 		"sunky" => ["milk"],
 		"fleetway" => ["chaos"],
 		"fatalerror" => ["fatality"],
+		"xterion" => ["substantial", "digitalized"],
+		"sl4sh" => ["b4cksl4sh"],
 		"chaotix" => ["my-horizon", "our-horizon"],
 		"yourself..." => ["yourself"],
 		"christmas" => ["missiletoe", "slaybells"],
 		"curse" => ["malediction"],
+	    "satanos" => ["perdition"],
 		"starved" => ["prey", "fight-or-flight"],
+		"sonic has passed" => ["burning"],
 		"needlemouse" => ["round-a-bout"],
 		"hog" => ["hog", "manual-blast"],
 		"sanic" => ["too-fest"],
-		"coldsteel" => ["personel", "personel-serious"],
-		"sh tails" => ["mania"]
+        "sunky" => ["milk"],
+		"sh tails" => ["mania"],
+		"coldsteel" => ["personel"]
+		
 	];
 	
 	public static function init()
@@ -55,7 +66,7 @@ class CharSongList
 			FlxG.save.data.charactersUnlocked.copy() : [];
 	}
 
-	public static function unlockSong(songId:String) {
+	publc static function unlockSong(songId:String) {
         if (FlxG.save.data.unlockedSongs == null) {
             FlxG.save.data.unlockedSongs = [];
         }
