@@ -65,6 +65,20 @@ class CharSongList
 			FlxG.save.data.charactersUnlocked.copy() : [];
 	}
 
+	public static var songToFreeplayChar:Map<String, String> = [
+		"endless" => "majin",
+		"choas" => "fleetway",
+		"fatality" => "fatalerror",
+		"b4cksl4sh" => "sl4sh",
+		"burning" => "sonic has passed",
+		"soulless" => "tails doll",
+		"malediction" => "curse",
+		"digitalized" => "xterion",
+		"manual-blast" => "hog",
+		"black-sun" => "faker",
+		"perdiction" => "satanos"
+	];
+
 	public static function unlockSong(songId:String) {
         if (FlxG.save.data.unlockedSongs == null) {
             FlxG.save.data.unlockedSongs = [];
