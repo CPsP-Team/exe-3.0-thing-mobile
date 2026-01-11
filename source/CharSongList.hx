@@ -29,7 +29,7 @@ class CharSongList
 	
 	public static final songData:Map<String, Array<String>> = [
 		"majin" => ["endless", "endless-og"],
-		"lord x" => ["cycles"],
+		"lord x" => ["cycles", "fate"],
 		"tails doll" => ["sunshine", "soulless"],
 		"sunky" => ["milk"],
 		"fleetway" => ["chaos"],
