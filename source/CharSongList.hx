@@ -49,12 +49,11 @@ class CharSongList
 		"starved" => ["prey", "fight-or-flight"],
 		"sonic has passed" => ["burning"],
 		"needlemouse" => ["round-a-bout"],
-		"hog" => ["hog", "manual-blast"],
-		"sanic" => ["too-fest"],
+		"hog" => ["hedge", "manual-blast"],
         "sunky" => ["milk"],
+        "sanic" => ["too-fest"],
 		"sh tails" => ["mania"],
-		"coldsteel" => ["personel"]
-		
+		"coldsteel" => ["personel"]		
 	];
 	
 	public static function init()
