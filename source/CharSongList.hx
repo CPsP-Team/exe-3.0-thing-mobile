@@ -65,7 +65,7 @@ class CharSongList
 			FlxG.save.data.charactersUnlocked.copy() : [];
 	}
 
-	publc static function unlockSong(songId:String) {
+	public static function unlockSong(songId:String) {
         if (FlxG.save.data.unlockedSongs == null) {
             FlxG.save.data.unlockedSongs = [];
         }
