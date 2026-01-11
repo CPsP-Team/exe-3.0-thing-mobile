@@ -76,7 +76,7 @@ class CharSongList
 		"digitalized" => "xterion",
 		"manual-blast" => "hog",
 		"black-sun" => "faker",
-		"perdiction" => "satanos"
+		"perdition" => "satanos"
 	];
 
 	public static function unlockSong(songId:String) {
