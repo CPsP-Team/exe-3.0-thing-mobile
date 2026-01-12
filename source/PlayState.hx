@@ -1649,6 +1649,10 @@ class PlayState extends MusicBeatState
 				gfGroup.visible = false;
 				boyfriendGroup.visible = false;
 				add(shadowTheFuckingHedgehog);
+			case 'SHWorkshop':
+			    gfGroup.visible = false;
+            case 'cycles-hills':
+			     gfGroup.visible = false;
 			case 'trioStage':
 				gfGroup.visible = false;
 				add(fgTree1);

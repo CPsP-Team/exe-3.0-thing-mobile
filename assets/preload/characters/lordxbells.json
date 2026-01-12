@@ -5,10 +5,10 @@
 				50,
 				10
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
+			"indices": [],
 			"name": "LORDX_left"
 		},
 		{
@@ -16,10 +16,10 @@
 				-6,
 				24
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
+			"indices": [],
 			"name": "LORDX_up"
 		},
 		{
@@ -27,10 +27,10 @@
 				-51,
 				-13
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
+			"indices": [],
 			"name": "LORDX_right"
 		},
 		{
@@ -38,10 +38,10 @@
 				-3,
 				-94
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
+			"indices": [],
 			"name": "LORDX_down"
 		},
 		{
@@ -49,18 +49,18 @@
 				0,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "LORDX_idle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/LORDX_SLAYBALLS",
 	"position": [
-		0,
-		0
+		-90,
+		200
 	],
 	"healthicon": "soylent",
 	"flip_x": false,
@@ -70,7 +70,7 @@
 		176
 	],
 	"camera_position": [
-		0,
+		20,
 		0
 	],
 	"sing_duration": 6.1,

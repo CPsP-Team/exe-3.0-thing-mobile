@@ -93,10 +93,10 @@
 				-5,
 				0
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "idle",
-			"loop": false,
+			"indices": [],
 			"name": "IDLE"
 		},
 		{
@@ -104,17 +104,17 @@
 				-21,
 				25
 			],
-			"indices": [],
+			"loop": false,
 			"fps": 24,
 			"anim": "Xeno Laugh",
-			"loop": false,
+			"indices": [],
 			"name": "Laugh"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/xenobells",
 	"position": [
-		0,
+		50,
 		350
 	],
 	"healthicon": "ycr",
@@ -125,7 +125,7 @@
 		135
 	],
 	"camera_position": [
-		0,
+		90,
 		0
 	],
 	"sing_duration": 4,
