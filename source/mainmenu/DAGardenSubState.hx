@@ -24,7 +24,7 @@ class DAGardenSubState extends MusicBeatSubstate {
     override public function new() {
         super();
 
-        for (stupidSongArray in CharSongList.songData.iterator())
+        for (stupidSongArray in CharSongList.data.iterator())
             for (stupidSong in stupidSongArray)
                 songsList.push(stupidSong);
 
