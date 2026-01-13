@@ -5,6 +5,7 @@ class CharSongList
 	static var loaded:Bool = false;
 
 	public static var data:Map<String, Array<String>> = [
+	  "finale" => ["final-escape"],
 		"majin" => ["endless", "endless-og"],
 		"lord x" => ["cycles", "fate"],
 		"tails doll" => ["sunshine", "soulless"],
@@ -29,9 +30,11 @@ class CharSongList
 	];
 
 	public static var characters:Array<String> = [
+	  "finale",
 	  "majin", 
     "lord x", 
   	"tails doll", 
+  	"requital",
   	"sunky", 
     "fleetway", 
     "fatalerror", 
@@ -48,9 +51,11 @@ class CharSongList
 	];
 
 	public static var charactersUnlocked:Array<String> = [
+	  "finale",
 	  "majin", 
     "lord x", 
-  	"tails doll", 
+  	"tails doll",
+  	"requital",
   	"sunky", 
     "fleetway", 
     "fatalerror", 
