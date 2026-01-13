@@ -129,7 +129,7 @@ class HScript
 		return (isBlank) ? blankVars.get(name) : (interp != null) ? interp.variables.get(name) : null;
 
 	inline public function setValue(name:String, value:Dynamic)
-		(isBlank) ? blankVars.set(name, value) : (interp != null) ? interp.variables.set(name, value) : null;
+		return (isBlank) ? blankVars.set(name, value) : (interp != null) ? interp.variables.set(name, value) : null;
 	#else
 	public var interp:Null<Dynamic> = null;
 	public var expr:Null<Dynamic> = null;
