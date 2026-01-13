@@ -42,7 +42,7 @@ class HScript
 		// 	scriptPath = "assets/" + scriptPath;
 
 		#if MODS ALLOWED
-		var boolArray:Array<Bool> = #if MODS_ALLOWED [for (ext in allowedExtensions) sys.FileSystem.exists(Paths.modFolders('$scriptPath.$ext')), #end for (ext in allowedExtensions) Assets.exists(Paths.getPath('$scriptPath.$ext'))];
+		var boolArray:Array<Bool> = [#if MODS_ALLOWED for (ext in allowedExtensions) sys.FileSystem.exists(Paths.modFolders('$scriptPath.$ext')), #end for (ext in allowedExtensions) Assets.exists(Paths.getPath('$scriptPath.$ext'))];
 		#end
 		isBlank = (!boolArray.contains(true));
 		if (boolArray.contains(true))
