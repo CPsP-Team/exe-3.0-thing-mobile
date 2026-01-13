@@ -1739,6 +1739,7 @@ class PlayState extends MusicBeatState
 				dad.x -= 1050;
 				dad.y += 400;
 			case 'starved':
+			  gfGroup.visible = false;
 				boyfriend.y += 75;
 				dad.x += 300;
 				dad.y -= 350;
