@@ -2,7 +2,6 @@ package;
 
 import sys.io.File;
 import flixel.FlxG;
-import openfl.utils.Assets;
 #if sys
 import Main;
 import hscript.Expr.Error;
@@ -40,7 +39,7 @@ class HScript
 		
 		// if (!scriptPath.startsWith("assets/"))
 		// 	scriptPath = "assets/" + scriptPath;
-
+		
 		var boolArray:Array<Bool> = [
               for (ext in allowedExtensions)
               (
@@ -128,9 +127,8 @@ class HScript
 	inline public function getValue(name:String):Dynamic
 		return (isBlank) ? blankVars.get(name) : (interp != null) ? interp.variables.get(name) : null;
 
-	inline public function setValue(name:String, value:Dynamic) {
-	   (isBlank) ? blankVars.set(name, value) : (interp != null) ? interp.variables.set(name, value) : null;
-	}
+	inline public function setValue(name:String, value:Dynamic)
+		(isBlank) ? blankVars.set(name, value) : (interp != null) ? interp.variables.set(name, value) : null;
 	#else
 	public var interp:Null<Dynamic> = null;
 	public var expr:Null<Dynamic> = null;
