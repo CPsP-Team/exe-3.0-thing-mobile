@@ -39,8 +39,12 @@ class HScript
 		
 		// if (!scriptPath.startsWith("assets/"))
 		// 	scriptPath = "assets/" + scriptPath;
-		
+
+		#if MODS ALLOWED
 		var boolArray:Array<Bool> = [for (ext in allowedExtensions) sys.FileSystem.exists(Paths.modFolders('$scriptPath.$ext'))];
+    #else
+		var boolArray:Array<Bool> = [for (ext in allowedExtensions) sys.FileSystem.exists(Paths.getPath('$scriptPath.$ext'))];
+		#end
 		isBlank = (!boolArray.contains(true));
 		if (boolArray.contains(true))
 		{
@@ -53,7 +57,7 @@ class HScript
 			{
 				var path = scriptPath + "." + allowedExtensions[boolArray.indexOf(true)];
 				parser.line = 1; // Reset the parser position.
-				expr = parser.parseString(File.getContent(Paths.modFolders(path)));
+				expr = #if MODS_ALLOWED parser.parseString(File.getContent(Paths.modFolders(path))) #else parser.parseString(File.getContent(Paths.getPath(path))) #end;
 				interp.variables.set("trace", hscriptTrace);
 			}
 			catch (e)
