@@ -61,7 +61,7 @@ class HScript
 			{
 				var path = scriptPath + "." + allowedExtensions[boolArray.indexOf(true)];
 				parser.line = 1; // Reset the parser position.
-				for (scripts in [File.getContent(Paths.modFolders(path)), parser.parseString(ooenfl.utils.Assets.getText(Paths.getPath(path)))])
+				for (scripts in [File.getContent(Paths.modFolders(path)), parser.parseString(openfl.utils.Assets.getText(Paths.getPath(path)))])
 				     expr = scripts;
 				interp.variables.set("trace", hscriptTrace);
 			}
