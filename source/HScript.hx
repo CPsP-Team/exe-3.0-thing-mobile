@@ -41,11 +41,15 @@ class HScript
 		// if (!scriptPath.startsWith("assets/"))
 		// 	scriptPath = "assets/" + scriptPath;
 
-		var boolArray:Array<Bool> = for (ext in allowedExtensions) {
-			                            #if MODS_ALLOWED sys.FileSystem.exists(Paths.modFolders('$scriptPath.$ext')) || #end 
-										Assets.exists(Paths.getPath('$scriptPath.$ext'));
-		                            };
-		
+		var boolArray:Array<Bool> = [
+              for (ext in allowedExtensions)
+              (
+                  #if MODS_ALLOWED
+                  sys.FileSystem.exists(Paths.modFolders('$scriptPath.$ext')) ||
+                  #end
+                  Assets.exists(Paths.getPath('$scriptPath.$ext'))
+              )
+        ];
 		isBlank = (!boolArray.contains(true));
 		if (boolArray.contains(true))
 		{
