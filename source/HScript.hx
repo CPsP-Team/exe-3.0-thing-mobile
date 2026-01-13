@@ -32,7 +32,7 @@ class HScript
 	var blankVars:Map<String, Null<Dynamic>>;
 	var path:String;
 
-	#if sys
+	//#if sys
 	public function new(scriptPath:String)
 	{		
 		path = scriptPath;
@@ -129,7 +129,7 @@ class HScript
 
 	inline public function setValue(name:String, value:Dynamic)
 		(isBlank) ? blankVars.set(name, value) : (interp != null) ? interp.variables.set(name, value) : null;
-	#else
+	/*#else
 	public var interp:Null<Dynamic> = null;
 	public var expr:Null<Dynamic> = null;
 
@@ -144,5 +144,5 @@ class HScript
 
 	public function setValue(name:String, value:Dynamic)
 		blankVars.set(name, value);
-	#end
+	#end*/
 }
