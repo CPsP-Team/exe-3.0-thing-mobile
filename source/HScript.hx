@@ -46,7 +46,7 @@ class HScript
                   #if MODS_ALLOWED
                   sys.FileSystem.exists(Paths.modFolders('$scriptPath.$ext')) ||
                   #end
-                  Assets.exists(Paths.getPath('$scriptPath.$ext'))
+                  openfl.utils.Assets.exists(Paths.getPath('$scriptPath.$ext'))
               )
         ];
 		isBlank = (!boolArray.contains(true));
@@ -61,7 +61,7 @@ class HScript
 			{
 				var path = scriptPath + "." + allowedExtensions[boolArray.indexOf(true)];
 				parser.line = 1; // Reset the parser position.
-				for (scripts in [File.getContent(Paths.modFolders(path)), #end parser.parseString(Assets.getText(Paths.getPath(path)))])
+				for (scripts in [File.getContent(Paths.modFolders(path)), #end parser.parseString(ooenfl.utils.Assets.getText(Paths.getPath(path)))])
 				     expr = scripts;
 				interp.variables.set("trace", hscriptTrace);
 			}
