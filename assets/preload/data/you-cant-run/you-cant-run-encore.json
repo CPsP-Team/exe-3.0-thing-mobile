@@ -2532,7 +2532,8 @@
 					[
 						56571.4285714286,
 						5,
-						1232.14285714286
+						1232.14285714286,
+						"Pixel Note"
 					],
 					[
 						57642.8571428571,
@@ -4218,7 +4219,15 @@
 			},
 			{
 				"lengthInSteps": 16,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						125142.857142857,
+						-1,
+						"HUD opaticity",
+						"0.2",
+						"1"
+					]
+				],
 				"mustHitSection": false
 			},
 			{
@@ -4403,6 +4412,13 @@
 						132267.857142857,
 						3,
 						0
+					],
+					[
+						132107.142857143,
+						-1,
+						"HUD opaticity",
+						"1",
+						"0.2"
 					]
 				],
 				"typeOfSection": 0,
@@ -4682,6 +4698,13 @@
 						"Lyrics",
 						"THE",
 						""
+					],
+					[
+						139714.285714286,
+						-1,
+						"HUD opaticity",
+						"0",
+						"0.5"
 					]
 				],
 				"altAnim": false,
@@ -5274,6 +5297,13 @@
 						"Lyrics",
 						"DIE",
 						"0.7"
+					],
+					[
+						154928.571428571,
+						-1,
+						"HUD opaticity",
+						"1",
+						"0.1"
 					]
 				],
 				"altAnim": false,
@@ -7100,7 +7130,15 @@
 			{
 				"lengthInSteps": 16,
 				"typeOfSection": 0,
-				"sectionNotes": [],
+				"sectionNotes": [
+					[
+						198857.142857143,
+						-1,
+						"HUD opaticity",
+						"0",
+						"0.1"
+					]
+				],
 				"altAnim": false,
 				"bpm": 140,
 				"changeBPM": false,
@@ -8644,6 +8682,36 @@
 				"bpm": 140,
 				"changeBPM": false,
 				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
+			},
+			{
+				"lengthInSteps": 16,
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 140,
+				"changeBPM": false,
+				"mustHitSection": true
+			},
+			{
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"lengthInSteps": 16,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 140
 			},
 			{
 				"sectionNotes": [],
