@@ -2295,6 +2295,7 @@ class PlayState extends MusicBeatState
 		add(barbedWires);
 		add(wireVignette);
 		var daSong:String = Paths.formatToSongPath(curSong);
+		if (CoolUtil.difficultyString().toLowerCase() == "encore") daSong += "-encore"; //why they are a difficulty
 		switch (daSong)
 		{
 			case "final-escape":
