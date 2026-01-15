@@ -61,8 +61,8 @@ class HScript
 			{
 				var path = scriptPath + "." + allowedExtensions[boolArray.indexOf(true)];
 				parser.line = 1; // Reset the parser position.
-				for (scripts in [File.getContent(Paths.modFolders(path)), openfl.utils.Assets.getText(Paths.getPreloadPath(path))])
-				     expr = parser.parseString(scripts);
+				if (openfl.utils.Assets.exists(Paths.getPreloadPath(path))) expr = parser.parseString(openfl.utils.Assets.getText(Paths.getPreloadPath(path)));
+				if (sys.FileSystem.exists(Paths.modFolders(path))) expr = parser.parseString(File.getContent(Paths.modFolders(path)));
 				interp.variables.set("trace", hscriptTrace);
 			}
 			catch (e)
