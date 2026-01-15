@@ -313,6 +313,7 @@ class StoryMenuState extends MusicBeatState
 				PlayState.SONG = Song.loadFromJson(songArray[real].toLowerCase() + curDifficulty, songArray[real].toLowerCase());
 				PlayState.isStoryMode = true;
 				PlayState.isEncoreMode = false;
+				PlayState.storyDifficulty = 2;
 				LoadingState.loadAndSwitchState(new PlayState());
 			}
 
