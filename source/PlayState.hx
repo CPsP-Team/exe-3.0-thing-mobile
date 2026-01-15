@@ -2305,7 +2305,6 @@ class PlayState extends MusicBeatState
 				startCountdown();
 
 			case 'too-slow', 'you-cant-run', 'triple-trouble', 'soulless':
-			   if (isStoryMode) {
 			  //videoCutscene
 				inCutscene = true;
 
@@ -2318,7 +2317,6 @@ class PlayState extends MusicBeatState
 				video.onEndReached.add(startCountdown);
 				video.play(Paths.video("cutscenes/" + daSong));
 				#end
-      }
 		
 			case 'endless' | 'cycles' | 'prey' | 'fight-or-flight' | 'round-a-bout':
 				if (daSong == 'too-slow' || daSong == 'you-cant-run' || daSong == 'cycles')
