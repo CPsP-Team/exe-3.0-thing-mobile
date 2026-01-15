@@ -2299,6 +2299,7 @@ class PlayState extends MusicBeatState
 		{
 			case "final-escape":
 				camHUD.alpha = 0;
+				startCountdown();
 			case 'personel':
 				camGame.alpha = 0;
 				startCountdown();
