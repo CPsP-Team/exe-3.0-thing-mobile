@@ -7569,7 +7569,7 @@ class PlayState extends MusicBeatState
 						obj.visible = true;
 			}
 		}
-		if (SONG.song.toLowerCase() == 'too-slow')
+		if (SONG.song.toLowerCase() == 'too-slow' && CoolUtil.difficultyString().toLowerCase() != "encore")
 		{
 			switch (curStep)
 			{
@@ -7578,7 +7578,7 @@ class PlayState extends MusicBeatState
 				case 1305:
 			}
 		}
-		if (SONG.song.toLowerCase() == 'too-slow-encore')
+		if (SONG.song.toLowerCase() == 'too-slow' && CoolUtil.difficultyString().toLowerCase() == "encore")
 		{
 			switch (curStep)
 			{
