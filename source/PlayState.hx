@@ -1,8 +1,5 @@
 package;
 
-// hello welcome to code for sonic.sex 2.5!!!!!!!!!!!!!!!!!!!!!!!!! i am currently shitting
-// HOLY FUCKLES ITS KNUCKLES
-// HIS NAME IS CHAOTIX!!!
 import openfl.display.Window;
 import flixel.system.scaleModes.RatioScaleMode;
 import FunkinLua;
@@ -3341,10 +3338,17 @@ class PlayState extends MusicBeatState
 						switch (SONG.song.toLowerCase())
 						{
 							case 'endless':
+								if(CoolUtil.difficultyString().toLowerCase() != "encore") {
 								if (noteStep >= 900)
 								{
 									songNotes[3] = 'Majin Note';
 								}
+							} else if (CoolUtil.difficultyString().toLowerCase() != "hard") {
+								if (noteStep >= 784)
+								{
+									songNotes[3] = 'Majin Note';
+								}
+							}
 							case 'you-cant-run':
 								if (noteStep > 528 && noteStep < 784)
 								{
