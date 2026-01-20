@@ -1,4 +1,5 @@
 package;
+import flixel.FlxG;
 
 class CharSongList
 {
@@ -93,9 +94,9 @@ class CharSongList
 		{
 			loaded = true;
 
-			if (flixel.FlxG.save.data.charactersUnlocked != null)
+			if (FlxG.save.data.charactersUnlocked != null)
 			{
-				var unlockedShit:Array<String> = flixel.FlxG.save.data.charactersUnlocked;
+				var unlockedShit:Array<String> = FlxG.save.data.charactersUnlocked;
 
 				for (str in unlockedShit)
 				{
@@ -104,17 +105,17 @@ class CharSongList
 			}
 			else
 			{
-				flixel.FlxG.save.data.charactersUnlocked = [];
+				FlxG.save.data.charactersUnlocked = [];
 			}
 
-			trace(flixel.FlxG.save.data.charactersUnlocked);
+			trace(FlxG.save.data.charactersUnlocked);
 		}
 	}
 
 	public static function save()
 		for (str in charactersUnlocked)
-			if (!flixel.FlxG.save.data.charactersUnlocked.contains(str))
-				flixel.FlxG.save.data.charactersUnlocked.push(str);
+			if (!FlxG.save.data.charactersUnlocked.contains(str))
+				FlxG.save.data.charactersUnlocked.push(str);
 
 	public static function getSongsByChar(char:String)
 	{
