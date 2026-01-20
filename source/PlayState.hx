@@ -4363,7 +4363,8 @@ class PlayState extends MusicBeatState
 						songPercent = 0;
 						timeTxt.text = 'Infinity';
 					} else if (SONG.song.toLowerCase() == 'endless' && curStep >= 784 && CoolUtil.difficultyString().toLowerCase() != "hard") {
-					 
+					  songPercent = 0;
+						timeTxt.text = 'Infinity';
 					}
 					else
 						timeTxt.text = minutesRemaining + ':' + secondsRemaining;
