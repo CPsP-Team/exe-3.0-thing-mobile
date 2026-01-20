@@ -2302,7 +2302,7 @@ class PlayState extends MusicBeatState
 				camGame.alpha = 0;
 				startCountdown();
 
-			case 'too-slow', 'you-cant-run', 'triple-trouble', 'soulless':
+			case 'too-slow', 'you-cant-run', 'you-cant-run-encore', 'triple-trouble', 'soulless':
 			  //videoCutscene
 				inCutscene = true;
 
@@ -3584,7 +3584,7 @@ class PlayState extends MusicBeatState
 			if (SONG.player1 == "bf-fatal" && player == 1)
 				skin = 'week6';
 
-            if (SONG.song.toLowerCase() == 'endless' && curStep >= 900)
+			if (SONG.song.toLowerCase() == 'endless' && curStep >= 900)
 				skin = 'Majin_Notes';
 			if (SONG.song.toLowerCase() == 'endless-og' && curStep >= 910)
 				skin = 'Majin_Notes';
@@ -4363,10 +4363,8 @@ class PlayState extends MusicBeatState
 					{
 						songPercent = 0;
 						timeTxt.text = 'Infinity';
-					}
-					else if (SONG.song.toLowerCase() == 'endless-og' && curStep >= 910)
-					{
-						songPercent = 0;
+					} else if (SONG.song.toLowerCase() == 'endless' && curStep >= 784 && CoolUtil.difficultyString().toLowerCase() != "hard") {
+					  songPercent = 0;
 						timeTxt.text = 'Infinity';
 					}
 					else
@@ -7271,7 +7269,7 @@ class PlayState extends MusicBeatState
 					starvedLightsFinale();
 			}
 		}
-		if (curStage == 'trioStage' && SONG.song.toLowerCase() == 'triple-trouble')
+		if (curStage == 'trioStage' && SONG.song.toLowerCase() == 'triple-trouble' && CoolUtil.difficultyString().toLowerCase() != "encore")
 		{
 			switch (curStep)
 			{
@@ -7351,6 +7349,7 @@ class PlayState extends MusicBeatState
 
 					FlxTween.tween(vg, {alpha: 0.90}, 2.5, {ease: FlxEase.quadInOut});
 				case 1296:
+				  triggerEventNote('strum swap1', 'dad', 'bf');
 					timeBar.createFilledBar(0x00AD0E0E, 0xFFAD0E0E);
 					timeBar.updateBar();
 
@@ -7404,6 +7403,7 @@ class PlayState extends MusicBeatState
 					grassXeno.visible = true;
 					p3staticbg.visible = true;
 				case 2832:
+			  	triggerEventNote('strum swap2', 'bf', 'dad');
 					timeBar.createFilledBar(0x00A87608, 0xFFA87608);
 					timeBar.updateBar();
 
@@ -7425,6 +7425,19 @@ class PlayState extends MusicBeatState
 				case 4111:
 					timeBar.createFilledBar(0x00D416E3, 0xFFD416E3);
 					timeBar.updateBar();
+
+          triggerEventNote('Change Character', 'dad', 'BEAST');
+          triggerEventNote('Change Character', 'bf', 'bf-perspective-right');
+
+
+					defaultCamZoom = 0.9;
+
+					fgTree1.alpha = 0;
+					fgTree2.alpha = 0;
+
+					backtreesXeno.visible = true;
+					grassXeno.visible = true;
+					p3staticbg.visible = true;
 			}
 		}
 		if (SONG.song.toLowerCase() == 'personel')
