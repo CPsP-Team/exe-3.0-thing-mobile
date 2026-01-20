@@ -7840,7 +7840,7 @@ class PlayState extends MusicBeatState
 
 		if (SONG.song.toLowerCase() == 'my-horizon')
 		{
-			switch ()
+			switch (curStep)
 			{
 				case 896:
 					FlxTween.tween(camHUD, {alpha: 0}, 2.2);
