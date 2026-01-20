@@ -2302,7 +2302,7 @@ class PlayState extends MusicBeatState
 				camGame.alpha = 0;
 				startCountdown();
 
-			case 'too-slow', 'you-cant-run', 'you-cant-run-encore' 'triple-trouble', 'soulless':
+			case 'too-slow', 'you-cant-run', 'you-cant-run-encore', 'triple-trouble', 'soulless':
 			  //videoCutscene
 				inCutscene = true;
 
