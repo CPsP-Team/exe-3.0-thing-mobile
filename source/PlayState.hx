@@ -3349,6 +3349,8 @@ class PlayState extends MusicBeatState
 									songNotes[3] = 'Majin Note';
 								}
 							}
+							case 'endless-og':
+								if (noteStep >= 910) songNotes[3] = 'Majin Notes';
 							case 'you-cant-run':
 								if (noteStep > 528 && noteStep < 784)
 								{
@@ -3582,7 +3584,9 @@ class PlayState extends MusicBeatState
 			if (SONG.player1 == "bf-fatal" && player == 1)
 				skin = 'week6';
 
-			if (SONG.song.toLowerCase() == 'endless' && curStep >= 900)
+            if (SONG.song.toLowerCase() == 'endless' && curStep >= 900)
+				skin = 'Majin_Notes';
+			if (SONG.song.toLowerCase() == 'endless-og' && curStep >= 910)
 				skin = 'Majin_Notes';
 
 			var babyArrow:StrumNote = new StrumNote(0, strumLine.y, i, player, skin);
@@ -4356,6 +4360,11 @@ class PlayState extends MusicBeatState
 						secondsRemaining = '0' + secondsRemaining; // Dunno how to make it display a zero first in Haxe lol
 
 					if (SONG.song.toLowerCase() == 'endless' && curStep >= 898)
+					{
+						songPercent = 0;
+						timeTxt.text = 'Infinity';
+					}
+					else if (SONG.song.toLowerCase() == 'endless-og' && curStep >= 910)
 					{
 						songPercent = 0;
 						timeTxt.text = 'Infinity';

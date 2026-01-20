@@ -30,14 +30,15 @@ class CharSongList
 	];
 
 	public static var characters:Array<String> = [
-	  "finale",
-	  "majin", 
+	"finale",
+	"majin", 
     "lord x", 
   	"tails doll", 
   	"requital",
   	"sunky", 
     "fleetway", 
     "fatalerror", 
+	"xterion",
   	"chaotix", 
     "yourself...",
     "christmas",
@@ -51,14 +52,15 @@ class CharSongList
 	];
 
 	public static var charactersUnlocked:Array<String> = [
-	  "finale",
-	  "majin", 
+	"finale",
+	"majin", 
     "lord x", 
   	"tails doll",
   	"requital",
   	"sunky", 
     "fleetway", 
-    "fatalerror", 
+    "fatalerror",
+	"xterion",
   	"chaotix", 
     "yourself...",
     "christmas",
