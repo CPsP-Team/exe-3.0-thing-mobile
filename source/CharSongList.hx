@@ -6,7 +6,7 @@ class CharSongList
 
 	public static var data:Map<String, Array<String>> = [
 	  "finale" => ["final-escape"],
-		"majin" => ["endless", "endless-og"],
+		"majin" => ["endless", "endless-og", "endeavors"],
 		"lord x" => ["cycles", "fate"],
 		"tails doll" => ["sunshine", "soulless"],
 		"requital" => ["forestall-desire", "deception"],
@@ -30,8 +30,8 @@ class CharSongList
 	];
 
 	public static var characters:Array<String> = [
-	  "finale",
-	  "majin", 
+	"finale",
+	"majin", 
     "lord x", 
   	"tails doll", 
   	"requital",
@@ -51,8 +51,8 @@ class CharSongList
 	];
 
 	public static var charactersUnlocked:Array<String> = [
-	  "finale",
-	  "majin", 
+	"finale",
+	"majin", 
     "lord x", 
   	"tails doll",
   	"requital",
@@ -73,7 +73,7 @@ class CharSongList
 
 	public static var songToFreeplayChar:Map<String, String> = [
 		"endless" => "majin",
-		"choas" => "fleetway",
+		"chaos" => "fleetway",
 		"fatality" => "fatalerror",
 		"b4cksl4sh" => "sl4sh",
 		"burning" => "sonic has passed",

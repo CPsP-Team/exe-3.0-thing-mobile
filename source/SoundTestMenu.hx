@@ -48,7 +48,7 @@ class SoundTestMenu extends MusicBeatState
 	var cam:FlxCamera;
 
 	var peakSongs:Map<String, Array<String>> = [
-		"12 25" => ["endless"],
+		"12 25" => ["endless", "endeavors"],
 		"7 7" => ["cycles", "fate"],
 		"8 21" => ["chaos"],
 		"4 20" => ["too-fest"],
