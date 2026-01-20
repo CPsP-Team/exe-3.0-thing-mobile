@@ -7349,7 +7349,7 @@ class PlayState extends MusicBeatState
 
 					FlxTween.tween(vg, {alpha: 0.90}, 2.5, {ease: FlxEase.quadInOut});
 				case 1296:
-				  triggerEventNote('strum swap1', 'dad', 'bf');
+				  //triggerEventNote('strum swap1', 'dad', 'bf');
 					timeBar.createFilledBar(0x00AD0E0E, 0xFFAD0E0E);
 					timeBar.updateBar();
 
@@ -7403,7 +7403,7 @@ class PlayState extends MusicBeatState
 					grassXeno.visible = true;
 					p3staticbg.visible = true;
 				case 2832:
-			  	triggerEventNote('strum swap2', 'bf', 'dad');
+			  	//triggerEventNote('strum swap2', 'bf', 'dad');
 					timeBar.createFilledBar(0x00A87608, 0xFFA87608);
 					timeBar.updateBar();
 
