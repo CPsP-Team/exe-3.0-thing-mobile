@@ -7212,6 +7212,22 @@ class PlayState extends MusicBeatState
 					}
 			}
 		}
+ 					if (curSong == 'sunshine' && curStep > 588 && curStep < 860 && !daNote.isSustainNote)
+					{
+						playerStrums.forEach(function(spr:FlxSprite)
+						{
+							spr.alpha = 0.7;
+							if (spr.alpha != 0)
+							{
+								new FlxTimer().start(0.01, function(trol:FlxTimer)
+								{
+									spr.alpha -= 0.03;
+									if (spr.alpha != 0)
+										trol.reset();
+								});
+							}
+						});
+					}
 
 		if (curSong == 'endless')
 		{
@@ -7824,7 +7840,7 @@ class PlayState extends MusicBeatState
 
 		if (SONG.song.toLowerCase() == 'my-horizon')
 		{
-			switch (curStep)
+			switch ()
 			{
 				case 896:
 					FlxTween.tween(camHUD, {alpha: 0}, 2.2);
