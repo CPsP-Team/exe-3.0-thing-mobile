@@ -60,8 +60,10 @@ import openfl.display.StageQuality;
 import openfl.events.KeyboardEvent;
 import openfl.filters.ShaderFilter;
 import openfl.utils.Assets as OpenFlAssets;
+#if sys
 import sys.FileSystem;
 import sys.io.File;
+#end
 import lime.app.Application;
 import flixel.group.FlxSpriteGroup.FlxTypedSpriteGroup;
 import flixel.tweens.FlxTween.FlxTweenManager;
