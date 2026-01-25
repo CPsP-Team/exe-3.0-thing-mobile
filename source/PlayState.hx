@@ -7214,7 +7214,7 @@ class PlayState extends MusicBeatState
 					}
 			}
 		}
- 					if (curSong == 'sunshine' && curStep > 588 && curStep < 860 && !Note.isSustainNote)
+ 					/*if (curSong == 'sunshine' && curStep > 588 && curStep < 860 && !daNote.isSustainNote)
 					{
 						playerStrums.forEach(function(spr:FlxSprite)
 						{
@@ -7229,7 +7229,7 @@ class PlayState extends MusicBeatState
 								});
 							}
 						});
-					}
+					}*/
 
 		if (curSong == 'endless')
 		{
