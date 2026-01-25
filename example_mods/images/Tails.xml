@@ -1,4 +1,4 @@
-﻿<TextureAtlas imagePath="Tails Encore.png">
+﻿<TextureAtlas imagePath="Tails.png">
 	<SubTexture name="Tails Soul Down0000" x="3474" y="695" w="358" h="371"/>
 	<SubTexture name="Tails Soul Down0001" x="3474" y="1166" w="358" h="371"/>
 	<SubTexture name="Tails Soul Down0002" x="100" y="1211" w="358" h="371"/>
