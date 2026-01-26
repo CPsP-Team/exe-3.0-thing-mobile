@@ -470,6 +470,11 @@ class PlayState extends MusicBeatState
 	var slashLavaPov:FlxSprite;
 	// curse shit lololololol
 	var curseStatic:FlxSprite;
+	var curseFloor:FlxSprite;
+	var curseSky:FlxSprite;
+	var curseTrees:FlxSprite;
+	var curseTreesTwo:FlxSprite;
+	var curseFountain:FlxSprite;
 	var hexTimer:Float = 0;
 	var hexes:Float = 0;
 	var fucklesSetHealth:Float = 0;
@@ -484,6 +489,15 @@ class PlayState extends MusicBeatState
 	var hogTrees:BGSprite;
 	var hogRocks:BGSprite;
 	var hogOverlay:BGSprite;
+	//manual blast
+	var scorchedBg:BGSprite;
+	var scorchedMotain:BGSprite;
+	var scorchedWaterFalls:FlxSprite;
+	var scorchedFloor:FlxSprite;
+	var scorchedMonitor:FlxSprite;
+	var scorchedHills:FlxSprite;
+	var scorchedTrees:BGSprite;
+	var scorchedRocks:BGSprite;
 	// satanos stage shit
 	var satBackground:BGSprite;
 	var satFloor:BGSprite;
