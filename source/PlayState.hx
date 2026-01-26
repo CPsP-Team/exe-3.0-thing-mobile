@@ -1355,6 +1355,46 @@ class PlayState extends MusicBeatState
 				add(slashFloorPov);
 			case 'curse':
 				// THE CURSE OF X SEETHES AND MALDS
+
+
+					defaultCamZoom = 0.60;
+
+					curseSky = new FlxSprite(-300, -150);
+					curseSky.loadGraphic(Paths.image('curse/background', 'exe'));
+					curseSky.scrollFactor.set(1, 1);
+					curseSky.antialiasing = true;
+					curseSky.scale.set(1.5, 1.5);
+					add(curseSky);
+
+					curseTrees = new FlxSprite(-300, -150);
+					curseTrees.loadGraphic(Paths.image('curse/treesfarback', 'exe'));
+					curseTrees.scrollFactor.set(1, 1);
+					curseTrees.antialiasing = true;
+					curseTrees.scale.set(1.5, 1.5);
+					add(curseTrees);
+
+					curseTreesTwo = new FlxSprite(-300, -150);
+					curseTreesTwo.loadGraphic(Paths.image('curse/treesback', 'exe'));
+					curseTreesTwo.scrollFactor.set(1, 1);
+					curseTreesTwo.antialiasing = true;
+					curseTreesTwo.scale.set(1.5, 1.5);
+					add(curseTreesTwo);
+
+					curseFountain = new FlxSprite(350, 0);
+					curseFountain.frames = Paths.getSparrowAtlas('curse/goofyahfountain', 'exe');
+					curseFountain.animation.addByPrefix('fotan', "fountainlol", 24, true);
+					curseFountain.animation.play('fotan');
+					curseFountain.scale.x = 1.4;
+					curseFountain.scale.y = 1.4;
+					add(curseFountain);
+
+					curseFloor = new FlxSprite(-250, 700);
+					curseFloor.loadGraphic(Paths.image('curse/floor', 'exe'));
+					curseFloor.scrollFactor.set(1, 1);
+					curseFloor.antialiasing = true;
+					curseFloor.scale.set(1.5, 1.5);
+					add(curseFloor);
+
 				curseStatic = new FlxSprite(0, 0);
 				curseStatic.frames = Paths.getSparrowAtlas('curse/staticCurse');
 				curseStatic.animation.addByPrefix('stat', "menuSTATICNEW instance 1", 24, true);
@@ -1534,6 +1574,61 @@ class PlayState extends MusicBeatState
 				hogOverlay = new BGSprite('hog/overlay', -800, -300, 1.1, 0.9);
 				hogOverlay.scale.x = 1.25;
 				hogOverlay.scale.y = 1.25;
+						scorchedBg = new BGSprite('hog/blast/Sunset', -200, 0, 1.1, 0.9);
+					if (SONG.song.toLowerCase() == 'manual-blast') {
+						scorchedBg.scale.x = 1.75;
+						scorchedBg.scale.y = 1.75;
+						add(scorchedBg);
+		
+						scorchedMotain = new BGSprite('hog/blast/Mountains', 0, 0, 1.1, 0.9);
+						scorchedMotain.scale.x = 1.5;
+						scorchedMotain.scale.y = 1.5;
+						add(scorchedMotain);
+		
+						scorchedWaterFalls = new FlxSprite(-1000, 200);
+						scorchedWaterFalls.frames = Paths.getSparrowAtlas('hog/blast/Waterfalls', 'exe');
+						scorchedWaterFalls.animation.addByPrefix('water', 'British instance 1', 12);
+						scorchedWaterFalls.animation.play('water');
+						scorchedWaterFalls.scale.x = 1.1;
+						scorchedWaterFalls.scale.y = 1.1;
+						scorchedWaterFalls.scrollFactor.set(1, 1);
+						add(scorchedWaterFalls);
+
+						scorchedHills = new BGSprite('hog/blast/Hills', -100, 230, 1, 0.9);
+						add(scorchedHills);
+		
+						scorchedMonitor = new FlxSprite(1100, 265);
+						scorchedMonitor.frames = Paths.getSparrowAtlas('hog/blast/Monitor', 'exe');
+						scorchedMonitor.animation.addByPrefix('idle', 'Monitor', 12, false);
+						scorchedMonitor.animation.addByPrefix('fatal', 'Fatalerror', 12, false);
+						scorchedMonitor.animation.addByPrefix('nmi', 'NMI', 12, false);
+						scorchedMonitor.animation.addByPrefix('needle', 'Needlemouse', 12, false);
+						scorchedMonitor.animation.addByPrefix('starved', 'Storved', 12, false);
+						scorchedMonitor.animation.play('idle');
+						scorchedMonitor.scrollFactor.set(1, 0.9);
+						add(scorchedMonitor);
+
+						scorchedTrees = new BGSprite('hog/blast/Plants', -400, -50, 1, 0.9);
+						add(scorchedTrees);
+		
+						scorchedFloor = new BGSprite('hog/blast/Floor', -400, 780, 1, 0.9);
+						scorchedFloor.scale.x = 1.25;
+						scorchedFloor.scale.y = 1.25;
+						add(scorchedFloor);
+		
+						scorchedRocks = new BGSprite('hog/blast/Rocks', -500, 600, 1.1, 0.9);
+						scorchedRocks.scale.x = 1.25;
+						scorchedRocks.scale.y = 1.25;
+
+						scorchedBg.visible = false;
+						scorchedMotain.visible = false;
+						scorchedWaterFalls.visible = false;
+						scorchedHills.visible = false;
+						scorchedMonitor.visible = false;
+						scorchedTrees.visible = false;
+						scorchedFloor.visible = false;
+						scorchedRocks.visible = false;
+					}
 			default:
 				trace("HScript stage");
 
@@ -1677,6 +1772,7 @@ class PlayState extends MusicBeatState
 				gfGroup.visible = false;
 				add(hogRocks);
 				add(hogOverlay);
+				if (SONG.song.toLowerCase() == 'manual-blast') add(scorchedRocks);
 				hogOverlay.blend = LIGHTEN;
 
 			case 'satanos':
