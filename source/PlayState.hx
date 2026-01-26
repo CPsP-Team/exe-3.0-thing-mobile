@@ -7342,7 +7342,7 @@ class PlayState extends MusicBeatState
 						});
 					}*/
     if (curSong == 'manual-blast') {
-      			switch (curStep)
+      switch (curStep)
 			{
 			 case 864:
 			 hogStuff();
