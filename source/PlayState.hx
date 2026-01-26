@@ -1574,8 +1574,9 @@ class PlayState extends MusicBeatState
 				hogOverlay = new BGSprite('hog/overlay', -800, -300, 1.1, 0.9);
 				hogOverlay.scale.x = 1.25;
 				hogOverlay.scale.y = 1.25;
-						scorchedBg = new BGSprite('hog/blast/Sunset', -200, 0, 1.1, 0.9);
+
 					if (SONG.song.toLowerCase() == 'manual-blast') {
+					  scorchedBg = new BGSprite('hog/blast/Sunset', -200, 0, 1.1, 0.9);
 						scorchedBg.scale.x = 1.75;
 						scorchedBg.scale.y = 1.75;
 						add(scorchedBg);
