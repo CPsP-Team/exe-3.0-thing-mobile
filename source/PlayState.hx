@@ -7341,7 +7341,13 @@ class PlayState extends MusicBeatState
 							}
 						});
 					}*/
-
+    if (curSong == 'manual-blast') {
+      			switch (curStep)
+			{
+			 case 864:
+			 hogStuff();
+			}
+    }
 		if (curSong == 'endless')
 		{
 			switch (curStep)
@@ -8660,6 +8666,28 @@ class PlayState extends MusicBeatState
 		setOnLuas('curBeat', curBeat);
 		callOnLuas('onBeatHit', []);
 	}
+
+	function hogStuff() 
+		{
+			hogBg.visible = false;
+			hogMotain.visible = false;
+			hogWaterFalls.visible = false;
+			hogLoops.visible = false;
+			hogTrees.visible = false;
+			hogFloor.visible = false;
+			hogRocks.visible = false;
+
+		
+			scorchedBg.visible = true;
+			scorchedMotain.visible = true;
+			scorchedWaterFalls.visible = true;
+			scorchedHills.visible = true;
+			scorchedMonitor.visible = true;
+			scorchedTrees.visible = true;
+			scorchedFloor.visible = true;
+			scorchedRocks.visible = true;
+		}
+
 
 	public function callOnLuas(event:String, args:Array<Dynamic>):Dynamic
 	{
