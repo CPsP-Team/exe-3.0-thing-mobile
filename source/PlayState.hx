@@ -8676,8 +8676,8 @@ class PlayState extends MusicBeatState
 			hogTrees.visible = false;
 			hogFloor.visible = false;
 			hogRocks.visible = false;
+      hogOverlay.visible = false;
 
-		
 			scorchedBg.visible = true;
 			scorchedMotain.visible = true;
 			scorchedWaterFalls.visible = true;
