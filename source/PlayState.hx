@@ -1409,16 +1409,16 @@ class PlayState extends MusicBeatState
 					curseFloor.scale.set(1.5, 1.5);
 					add(curseFloor);
 
-				curseStatic = new FlxSprite(0, 0);
-				curseStatic.frames = Paths.getSparrowAtlas('curse/staticCurse');
-				curseStatic.animation.addByPrefix('stat', "menuSTATICNEW instance 1", 24, true);
-				curseStatic.animation.play('stat');
-				curseStatic.alpha = 0.5;
-				curseStatic.screenCenter();
-				curseStatic.scale.x = 2;
-				curseStatic.scale.y = 2;
-				curseStatic.visible = false;
-				add(curseStatic);
+					curseStatic = new FlxSprite(0, 0);
+					curseStatic.frames = Paths.getSparrowAtlas('curse/staticCurse', 'exe');
+					curseStatic.animation.addByPrefix('stat', "menuSTATICNEW instance 1", 24, true);
+					curseStatic.animation.play('stat');
+					curseStatic.alpha = 0.25;
+					curseStatic.screenCenter();
+					curseStatic.scale.x = 4;
+					curseStatic.scale.y = 4;
+					curseStatic.visible = false;
+					add(curseStatic);
 
 			case 'xterion':
 				defaultCamZoom = 0.85;
