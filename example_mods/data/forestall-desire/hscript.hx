@@ -15,7 +15,8 @@ function onCreatePost()
 	});
 }
 
-function onUpdatePost(elapsed) {
+// doesnt work for some reason??? - Mays
+/*function onUpdatePost(elapsed) {
     switch (curStep) {
         case 784:
             FlxG.camera.flash();
@@ -41,4 +42,4 @@ function onUpdatePost(elapsed) {
             gf = new Character(oldgfx, oldgfy, 'pico-whisper');
             gfGroup.add(gf);
     }
-}
+}*/
