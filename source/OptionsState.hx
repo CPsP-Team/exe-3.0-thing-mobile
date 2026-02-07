@@ -31,7 +31,7 @@ using StringTools;
 // TO DO: Redo the menu creation system for not being as dumb
 class OptionsState extends MusicBeatState
 {
-	var options:Array<String> = ['Controls', 'Mobile Controls', 'Preferences'];
+	var options:Array<String> = ['Controls', 'Preferences'];
 	private var grpOptions:FlxTypedGroup<Alphabet>;
 	private static var curSelected:Int = 0;
 	public static var menuBG:FlxSprite;
@@ -197,17 +197,17 @@ class ControlsSubstate extends MusicBeatSubstate {
 	var bindingTime:Float = 0;
 	override function update(elapsed:Float) {
 		if(!rebindingKey) {
-			if (controls.UI_UP_P || TouchInput.isSwipe('up')) {
+			if (controls.UI_UP_P) {
 				changeSelection(-1);
 			}
-			if (controls.UI_DOWN_P || TouchInput.isSwipe('down')) {
+			if (controls.UI_DOWN_P) {
 				changeSelection(1);
 			}
-			if (controls.UI_LEFT_P || TouchInput.isSwipe('left') || controls.UI_RIGHT_P || TouchInput.isSwipe('right')) {
+			if (controls.UI_LEFT_P || controls.UI_RIGHT_P) {
 				changeAlt();
 			}
 
-			if (controls.BACK || TouchInput.BACK()) {
+			if (controls.BACK) {
 				ClientPrefs.keyBinds = controlMap.copy();
 				ClientPrefs.reloadControls();
 				grpOptions.forEachAlive(function(spr:Alphabet) {
@@ -553,16 +553,16 @@ class PreferencesSubstate extends MusicBeatSubstate
 	var holdTime:Float = 0;
 	override function update(elapsed:Float)
 	{
-		if (controls.UI_UP_P || TouchInput.isSwipe('up'))
+		if (controls.UI_UP_P)
 		{
 			changeSelection(-1);
 		}
-		if (controls.UI_DOWN_P || TouchInput.isSwipe('down'))
+		if (controls.UI_DOWN_P)
 		{
 			changeSelection(1);
 		}
 
-		if (controls.BACK || TouchInput.BACK()) {
+		if (controls.BACK) {
 			grpOptions.forEachAlive(function(spr:Alphabet) {
 				spr.alpha = 0;
 			});
@@ -592,7 +592,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 		}
 
 		if(usesCheckbox) {
-			if(controls.ACCEPT || TouchInput.justPressed(grpOptions.members[curSelected]) && nextAccept <= 0) {
+			if(controls.ACCEPT && nextAccept <= 0) {
 				switch(options[curSelected]) {
 					case 'FPS Counter':
 						ClientPrefs.showFPS = !ClientPrefs.showFPS;
@@ -659,9 +659,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 				reloadValues();
 			}
 		} else {
-			if(controls.UI_LEFT || TouchInput.isSwipe('left') || controls.UI_RIGHT || TouchInput.isSwipe('right')) {
-				var add:Int = controls.UI_LEFT || TouchInput.isSwipe('left') ? -1 : 1;
-				if(holdTime > 0.5 || controls.UI_LEFT_P || TouchInput.isSwipe('left') || controls.UI_RIGHT_P || TouchInput.isSwipe('right'))
+			if(controls.UI_LEFT || controls.UI_RIGHT) {
+				var add:Int = controls.UI_LEFT ? -1 : 1;
+				if(holdTime > 0.5 || controls.UI_LEFT_P || controls.UI_RIGHT_P)
 				switch(options[curSelected]) {
 					case 'Framerate':
 						ClientPrefs.framerate += add;
