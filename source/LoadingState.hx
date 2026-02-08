@@ -152,7 +152,7 @@ class LoadingState extends MusicBeatState
 	
 	static function getNextState(target:FlxState, stopMusic = false):FlxState
 	{
-		var directory:String = 'exe';
+		var directory:String = Std.isOfType(FlxG.state, OptionsState) ? 'shared' : 'exe';
 		var weekDir:String = StageData.forceNextDirectory;
 		StageData.forceNextDirectory = null;
 
