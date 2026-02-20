@@ -23,7 +23,7 @@ class CharSongList
 		"starved" => ["prey", "fight-or-flight"],
 		"sonic has passed" => ["burning"],
 		"needlemouse" => ["round-a-bout"],
-		"hog" => ["manual-blast"],
+		"hog" => ["hedge", "manual-blast"],
 		"sunky" => ["milk"],
 		"sanic" => ["too-fest"],
 		"coldsteel" => ["personel"],

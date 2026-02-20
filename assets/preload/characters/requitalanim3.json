@@ -1,0 +1,53 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				201,
+				-84
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "Anim3",
+			"indices": [],
+			"name": "Trans2"
+		},
+		{
+			"offsets": [
+				201,
+				-84
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"name": "Trans2"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/RequitalAnim3",
+	"position": [
+		-15,
+		-20
+	],
+	"healthicon": "requital",
+	"flip_x": false,
+	"healthbar_colors": [
+		127,
+		92,
+		13
+	],
+	"camera_position": [
+		-632.5,
+		95.75
+	],
+	"sing_duration": 4,
+	"scale": 1
+}
